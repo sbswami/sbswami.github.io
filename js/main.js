@@ -1,129 +1,343 @@
-// Add your JavaScript code here
+// Career journey data structure
+const CAREER_JOURNEY = [
+    {
+        title: "Computer Science Degree",
+        date: "Aug 2015 - May 2019",
+        company: "Rajasthan Technical University, Kota",
+        description: "Graduated with a Computer Science and Engineering degree. Created three major projects showcasing diverse skills:",
+        details: [
+            "Developed a Canteen Management System using Java 8 and SQLite for offline use.",
+            "Created Buy Sell Inventory and Farm Management System applications for Android using Java and Android Studio.",
+            "Gained proficiency in Java, SQLite, and Android development."
+        ],
+        skills: ["Java", "SQLite", "Android"],
+        icon: "🎓"
+    },
+    {
+        title: "Script IT Solutions",
+        date: "Jul 2019 - Dec 2019",
+        company: "Script IT Solutions",
+        description: "Kickstarted professional journey as a versatile developer in a project-based startup:",
+        details: [
+            "Worked on multiple technologies simultaneously, including ReactJS (TypeScript), Django (Python3), and Electron.",
+            "Contributed to shared e-commerce and inventory management projects.",
+            "Independently developed an election ballot project using ReactJS and Electron."
+        ],
+        skills: ["ReactJS", "TypeScript", "Django", "Python3", "Electron"],
+        icon: "💼"
+    },
+    {
+        title: "Actyv",
+        date: "Dec 2019 - Jun 2020",
+        company: "Actyv",
+        description: "Deepened expertise in full-stack development at a multi-product company:",
+        details: [
+            "Focused on the Bill Discounting application, working with MongoDB, ExpressJS, and React Native.",
+            "Gained in-depth knowledge of TypeScript and JavaScript concepts.",
+            "Contributed to the development of multiple products including 'Jandan' and 'Bill Discounting'."
+        ],
+        skills: ["MongoDB", "ExpressJS", "React Native", "TypeScript"],
+        icon: "📱"
+    },
+    {
+        title: "Personal Projects",
+        date: "Jul 2020",
+        company: "",
+        description: "Sharpened skills through personal projects, all available on PlayStore:",
+        details: [
+            "Developed Buy Sell Inventory version 2 using Flutter.",
+            "Created 'Ram Ram Sa', a society database and relative record-keeping application.",
+            "Built 'CQN - Classroom Quiz Notes' for online classes, note sharing, and private classroom quizzes."
+        ],
+        skills: ["Flutter", "MongoDB", "Express"],
+        icon: "🚀"
+    },
+    {
+        title: "smallcase",
+        date: "Jul 2020 - Oct 2021",
+        company: "smallcase",
+        description: "Contributed significantly to a mid-stage startup as a mobile engineer:",
+        details: [
+            "Refactored the entire smallcase application from class-based to functional components in React Native.",
+            "Developed a custom React Native SDK for Fresh Chat due to lack of an official version.",
+            "Integrated a payment gateway for the smallcase manager payment system, a crucial revenue source."
+        ],
+        skills: ["React Native", "JavaScript", "SDK Development"],
+        icon: "📊"
+    },
+    {
+        title: "Flobiz - myBillBook (Part 1)",
+        company: "Flobiz",
+        date: "Oct 2021 - May 2022",
+        description: "Joined as a Full Stack Engineer, initially focusing on Android development:",
+        details: [
+            "Worked on myBillBook, a comprehensive billing solution platform.",
+            "Executed daily tasks and bug fixes in Android development using Kotlin.",
+            "Gained in-depth knowledge of the product ecosystem."
+        ],
+        skills: ["Android", "Kotlin", "Full Stack Development"],
+        icon: "💼"
+    },
+    {
+        title: "Flobiz - Invoice Module Initiative",
+        date: "Jun 2022 - Oct 2022",
+        company: "Flobiz",
+        description: "Led a crucial initiative to streamline invoice creation across platforms:",
+        details: [
+            "Created a unified invoice module usable across Android, iOS, Web, and Desktop platforms.",
+            "Implemented on-the-air update functionality for the module.",
+            "Developed an invoice service for sharing invoices via links.",
+            "Reduced invoice-related bugs from hundreds to 1-2 monthly.",
+            "Decreased developer effort from 5 to 1 for feature building and bug fixing."
+        ],
+        skills: ["HTML", "CSS", "JavaScript", "ExpressJS", "GitHub Actions"],
+        icon: "📄"
+    },
+    {
+        title: "Flobiz - Pricing Module Development",
+        date: "Nov 2022 - May 2023",
+        company: "Flobiz",
+        description: "Revolutionized the payment system for myBillBook:",
+        details: [
+            "Built a centralized pricing module handling price lists and payment gateways.",
+            "Enabled easy experimentation for the product team through on-the-air updates.",
+            "Implemented features for flash sales, discounts, and dynamic UI.",
+            "Reduced developer effort by 4 times for pricing-related tasks.",
+            "Utilized ReactJS and AWS S3 for module development and storage."
+        ],
+        skills: ["ReactJS", "AWS S3", "GitHub Actions"],
+        icon: "💰"
+    },
+    {
+        title: "Flobiz - Component Library and Design System",
+        date: "Jun 2023 - Nov 2023",
+        company: "Flobiz",
+        description: "Led the development of a comprehensive component library:",
+        details: [
+            "Headed a team of 3 developers to create a component library for web and desktop projects.",
+            "Developed a wide range of components including typography, buttons, tables, cards, etc.",
+            "Created a Storybook for easy component visualization and usage.",
+            "Successfully integrated the library into 3 major screens initially.",
+            "Achieved full adoption by 12 developers across web projects within 6 months."
+        ],
+        skills: ["Angular 16", "Storybook", "Design Systems"],
+        icon: "🎨"
+    },
+    {
+        title: "Flobiz - Loan Disbursal Application",
+        date: "Apr 2024 - Jul 2024",
+        company: "Flobiz",
+        description: "Spearheaded the development of a new loan disbursal application:",
+        details: [
+            "Led a team of 3 developers to create 'Money Tree by myBillBook' using Flutter.",
+            "Developed a Flutter package containing essential startup code for new projects.",
+            "Implemented features like translations, theming, routing, local DB, and network interceptors.",
+            "Successfully integrated the application with myBillBook and partnered with Liquloans."
+        ],
+        skills: ["Flutter", "Dart", "Mobile App Development"],
+        icon: "💸"
+    },
+    {
+        title: "Flobiz - mySandesh Application",
+        date: "Aug 2024 - Present",
+        company: "Flobiz",
+        description: "Currently working on a new application for creating and sharing business greetings:",
+        details: [
+            "Developing 'mySandesh', a Flutter-based application for creating festival greetings.",
+            "Contributed to project structure and created resizable custom widgets.",
+            "Implemented functionality to merge frames with images or videos.",
+            "Ongoing development and feature enhancement."
+        ],
+        skills: ["Flutter", "Dart", "UI/UX Design"],
+        icon: "🎉"
+    }
+];
+
+// Reverse the order of the CAREER_JOURNEY array
+CAREER_JOURNEY.reverse();
+
+// Group career journey items by company
+const groupedJourney = CAREER_JOURNEY.reduce((acc, item) => {
+    const company = item.company || item.title;
+    if (!acc[company]) {
+        acc[company] = [];
+    }
+    acc[company].push(item);
+    return acc;
+}, {});
+
+// Functions
+
+/**
+ * Creates a timeline item DOM element from a career journey item
+ * @param {Object} item - Career journey item
+ * @param {number} index - Index of the item in the journey
+ * @param {boolean} isFirst - Whether this is the first item for this company
+ * @param {boolean} isLast - Whether this is the last item for this company
+ * @returns {HTMLElement} - Timeline item DOM element
+ */
+function createTimelineItem(item, index, isFirst, isLast) {
+    const timelineItem = document.createElement('div');
+    timelineItem.classList.add('timeline-item');
+    if (isFirst) {
+        timelineItem.classList.add('company-start');
+    }
+    if (isLast) {
+        timelineItem.classList.add('company-end');
+    }
+    
+    timelineItem.innerHTML = `
+        <div class="timeline-date">${item.date}</div>
+        <h3 class="timeline-title">${item.title}</h3>
+        <p class="timeline-description">${item.description}</p>
+        <ul class="timeline-details">
+            ${item.details.map(detail => `<li>${detail}</li>`).join('')}
+        </ul>
+        <div class="timeline-skills">
+            ${item.skills.map(skill => `<span class="timeline-skill">${skill}</span>`).join('')}
+        </div>
+    `;
+    return timelineItem;
+}
+
+/**
+ * Adds a game icon to a container element
+ * @param {string} icon - Emoji icon
+ * @param {HTMLElement} container - Container element to add the icon to
+ */
+function addGameIcon(icon, container) {
+    const gameIcon = document.createElement('div');
+    gameIcon.classList.add('game-icon');
+    gameIcon.textContent = icon;
+    gameIcon.style.left = `${Math.random() * 100}%`;
+    gameIcon.style.top = `${Math.random() * 100}%`;
+    container.appendChild(gameIcon);
+}
+
+function animateTimeline() {
+    const timeline = document.querySelector('.timeline');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    // Adjust this value to trigger the animation earlier
+    const triggerBottom = window.innerHeight * 0.8;
+
+    timelineItems.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+
+        if (itemTop < triggerBottom) {
+            item.classList.add('show');
+        } else {
+            item.classList.remove('show');
+        }
+    });
+}
+
+// Main execution
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Portfolio website loaded');
 
-    const careerJourney = [
-        {
-            title: "Computer Science Degree",
-            date: "2015 - 2019",
-            description: "Graduated with a Computer Science and Engineering degree. Created three major projects: Canteen Management System (Java, SQLite), Buy Sell Inventory, and Farm Management System (Android, Java).",
-            image: "images/graduation.jpg"
-        },
-        {
-            title: "Script IT Solutions",
-            date: "July 2019 - December 2019",
-            description: "Started professional journey as a developer. Worked on multiple technologies including ReactJS (TypeScript), Django (Python3), and Electron. Developed e-commerce, inventory management, and a solo project for election ballots.",
-            image: "images/script-it.jpg"
-        },
-        {
-            title: "Actyv",
-            date: "December 2019 - June 2020",
-            description: "Worked on bill discounting application using MongoDB, ExpressJS, and React Native. Deepened knowledge of TypeScript and JavaScript concepts.",
-            image: "images/actyv.jpg"
-        },
-        {
-            title: "Personal Projects",
-            date: "July 2020",
-            description: "Developed three projects to enhance skills in Flutter, MongoDB, and Express. Created Buy Sell Inventory v2, Ram Ram Sa (society database app), and CQN - Classroom Quiz Notes for online classes.",
-            image: "images/personal-projects.jpg"
-        },
-        {
-            title: "smallcase",
-            date: "July 2020 - October 2021",
-            description: "Worked as a mobile engineer focusing on React Native. Refactored the entire smallcase application from class-based to functional components. Created a custom React Native SDK for Fresh Chat and integrated a payment gateway for the manager payment system.",
-            image: "images/smallcase.jpg"
-        },
-        {
-            title: "Flobiz - myBillBook",
-            date: "October 2021 - Present",
-            description: "Joined as a Full Stack Engineer. Initially worked on Android development with Kotlin. Later, led initiatives to create cross-platform solutions for invoice generation and pricing modules. Developed a component library with Angular 16 for web and desktop projects. Currently working on 'Money Tree by myBillBook' and 'mySandesh' applications using Flutter.",
-            image: "images/flobiz.jpg"
-        }
-    ];
-
+    // Create and populate the timeline
     const timeline = document.querySelector('.timeline');
-
-    careerJourney.forEach((item, index) => {
-        const timelineItem = document.createElement('div');
-        timelineItem.classList.add('timeline-item');
-
-        const content = document.createElement('div');
-        content.classList.add('timeline-content');
-
-        content.innerHTML = `
-            <h3>${item.title}</h3>
-            <p class="date">${item.date}</p>
-            <img src="${item.image}" alt="${item.title}" class="timeline-img">
-            <p>${item.description}</p>
-        `;
-
-        timelineItem.appendChild(content);
-        timeline.appendChild(timelineItem);
+    Object.entries(groupedJourney).forEach(([company, companyItems]) => {
+        const companySection = document.createElement('div');
+        companySection.classList.add('company-section');
+        
+        const companyHeader = document.createElement('h3');
+        companyHeader.classList.add('timeline-company');
+        companyHeader.textContent = company;
+        companySection.appendChild(companyHeader);
+        
+        companyItems.forEach((item, index) => {
+            const timelineItem = createTimelineItem(item, index, index === 0, index === companyItems.length - 1);
+            companySection.appendChild(timelineItem);
+            addGameIcon(item.icon, timelineItem);
+        });
+        
+        timeline.appendChild(companySection);
     });
 
-    // Intersection Observer for animations
+    // Set up Intersection Observer for animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05 });
 
-    document.querySelectorAll('section, .timeline-content').forEach(item => {
+    // Observe sections and timeline items for animation
+    document.querySelectorAll('section, .timeline-item').forEach(item => {
         observer.observe(item);
     });
 
-    // Smooth scrolling for navigation links
+    // Implement smooth scrolling for navigation links
     document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
+            const scrollContainer = document.querySelector('.scrollable-content');
             const headerOffset = 100;
             const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            const offsetPosition = elementPosition + scrollContainer.scrollTop - headerOffset;
 
-            window.scrollTo({
-                top: offsetPosition,
+            /// Reduce height from top that much space header section consuming after scroll.
+            const headerHeight = document.querySelector('header').offsetHeight;
+            
+
+            scrollContainer.scrollTo({
+                top: offsetPosition - headerHeight,
                 behavior: "smooth"
             });
         });
     });
 
-    // Header shrink on scroll
+    // Implement header shrink on scroll
     const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
+    const headerContent = document.querySelector('.header-content');
+    const headerTitle = document.querySelector('.header-content h1');
+    const headerSubtitle = document.querySelector('.header-content .subtitle');
+    const nav = document.querySelector('nav');
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+    const scrollContainer = document.querySelector('.scrollable-content');
+
+    let lastScrollTop = 0;
+
+    scrollContainer.addEventListener('scroll', () => {
+        const scrollTop = scrollContainer.scrollTop;
+
+        if (scrollTop > 100) {
             header.classList.add('scrolled');
+            scrollToTopBtn.classList.add('visible');
+            headerTitle.style.opacity = '0';
+            headerTitle.style.transform = 'translateY(-20px)';
+            headerSubtitle.style.opacity = '0';
+            headerSubtitle.style.transform = 'translateY(-20px)';
+            headerContent.style.transform = 'scale(0.9)';
+            nav.style.marginTop = '0.5rem';
         } else {
             header.classList.remove('scrolled');
-        }
-    });
-
-    // Scroll to top button
-    const scrollToTopBtn = document.createElement('div');
-    scrollToTopBtn.classList.add('scroll-to-top');
-    scrollToTopBtn.innerHTML = '↑';
-    document.body.appendChild(scrollToTopBtn);
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
             scrollToTopBtn.classList.remove('visible');
+            headerTitle.style.opacity = '1';
+            headerTitle.style.transform = 'translateY(0)';
+            headerSubtitle.style.opacity = '1';
+            headerSubtitle.style.transform = 'translateY(0)';
+            headerContent.style.transform = 'scale(1)';
+            nav.style.marginTop = '1.5rem';
         }
+
+        lastScrollTop = scrollTop;
     });
 
+    // Scroll to top functionality
     scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
+        scrollContainer.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     });
 
-    // Particle background
+    // Initialize particle background
     particlesJS('particles-js', {
         particles: {
             number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -142,21 +356,6 @@ document.addEventListener('DOMContentLoaded', function() {
         retina_detect: true
     });
 
-    // Typing animation for header subtitle
-    const subtitle = "Software Developer";
-    let i = 0;
-    const speed = 100; // Typing speed in milliseconds
-
-    function typeSubtitle() {
-        if (i < subtitle.length) {
-            document.querySelector('header h1::after').textContent += subtitle.charAt(i);
-            i++;
-            setTimeout(typeSubtitle, speed);
-        }
-    }
-
-    setTimeout(typeSubtitle, 1000); // Start typing after 1 second
-
     // Animate skill tags
     const skillTags = document.querySelectorAll('#skills li');
     skillTags.forEach((tag, index) => {
@@ -164,10 +363,10 @@ document.addEventListener('DOMContentLoaded', function() {
         tag.classList.add('animate-in');
     });
 
-    // Parallax effect for header
-    window.addEventListener('scroll', () => {
+    // Implement parallax effect for header
+    scrollContainer.addEventListener('scroll', () => {
         const header = document.querySelector('header');
-        const scrollPosition = window.pageYOffset;
+        const scrollPosition = scrollContainer.scrollTop;
         header.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
     });
 });

@@ -10,8 +10,7 @@ const CAREER_JOURNEY = [
             "Created Buy Sell Inventory and Farm Management System applications for Android using Java and Android Studio.",
             "Gained proficiency in Java, SQLite, and Android development."
         ],
-        skills: ["Java", "SQLite", "Android"],
-        icon: "🎓"
+        skills: ["Java", "SQLite", "Android"]
     },
     {
         title: "Script IT Solutions",
@@ -23,8 +22,7 @@ const CAREER_JOURNEY = [
             "Contributed to shared e-commerce and inventory management projects.",
             "Independently developed an election ballot project using ReactJS and Electron."
         ],
-        skills: ["ReactJS", "TypeScript", "Django", "Python3", "Electron"],
-        icon: "💼"
+        skills: ["ReactJS", "TypeScript", "Django", "Python3", "Electron"]
     },
     {
         title: "Actyv",
@@ -36,8 +34,7 @@ const CAREER_JOURNEY = [
             "Gained in-depth knowledge of TypeScript and JavaScript concepts.",
             "Contributed to the development of multiple products including 'Jandan' and 'Bill Discounting'."
         ],
-        skills: ["MongoDB", "ExpressJS", "React Native", "TypeScript"],
-        icon: "📱"
+        skills: ["MongoDB", "ExpressJS", "React Native", "TypeScript"]
     },
     {
         title: "Personal Projects",
@@ -49,8 +46,7 @@ const CAREER_JOURNEY = [
             "Created 'Ram Ram Sa', a society database and relative record-keeping application.",
             "Built 'CQN - Classroom Quiz Notes' for online classes, note sharing, and private classroom quizzes."
         ],
-        skills: ["Flutter", "MongoDB", "Express"],
-        icon: "🚀"
+        skills: ["Flutter", "MongoDB", "Express"]
     },
     {
         title: "smallcase",
@@ -62,8 +58,7 @@ const CAREER_JOURNEY = [
             "Developed a custom React Native SDK for Fresh Chat due to lack of an official version.",
             "Integrated a payment gateway for the smallcase manager payment system, a crucial revenue source."
         ],
-        skills: ["React Native", "JavaScript", "SDK Development"],
-        icon: "📊"
+        skills: ["React Native", "JavaScript", "SDK Development"]
     },
     {
         title: "Flobiz - myBillBook (Part 1)",
@@ -75,8 +70,7 @@ const CAREER_JOURNEY = [
             "Executed daily tasks and bug fixes in Android development using Kotlin.",
             "Gained in-depth knowledge of the product ecosystem."
         ],
-        skills: ["Android", "Kotlin", "Full Stack Development"],
-        icon: "💼"
+        skills: ["Android", "Kotlin", "Full Stack Development"]
     },
     {
         title: "Flobiz - Invoice Module Initiative",
@@ -90,8 +84,7 @@ const CAREER_JOURNEY = [
             "Reduced invoice-related bugs from hundreds to 1-2 monthly.",
             "Decreased developer effort from 5 to 1 for feature building and bug fixing."
         ],
-        skills: ["HTML", "CSS", "JavaScript", "ExpressJS", "GitHub Actions"],
-        icon: "📄"
+        skills: ["HTML", "CSS", "JavaScript", "ExpressJS", "GitHub Actions"]
     },
     {
         title: "Flobiz - Pricing Module Development",
@@ -105,8 +98,7 @@ const CAREER_JOURNEY = [
             "Reduced developer effort by 4 times for pricing-related tasks.",
             "Utilized ReactJS and AWS S3 for module development and storage."
         ],
-        skills: ["ReactJS", "AWS S3", "GitHub Actions"],
-        icon: "💰"
+        skills: ["ReactJS", "AWS S3", "GitHub Actions"]
     },
     {
         title: "Flobiz - Component Library and Design System",
@@ -120,8 +112,7 @@ const CAREER_JOURNEY = [
             "Successfully integrated the library into 3 major screens initially.",
             "Achieved full adoption by 12 developers across web projects within 6 months."
         ],
-        skills: ["Angular 16", "Storybook", "Design Systems"],
-        icon: "🎨"
+        skills: ["Angular 16", "Storybook", "Design Systems"]
     },
     {
         title: "Flobiz - Loan Disbursal Application",
@@ -134,8 +125,7 @@ const CAREER_JOURNEY = [
             "Implemented features like translations, theming, routing, local DB, and network interceptors.",
             "Successfully integrated the application with myBillBook and partnered with Liquloans."
         ],
-        skills: ["Flutter", "Dart", "Mobile App Development"],
-        icon: "💸"
+        skills: ["Flutter", "Dart", "Mobile App Development"]
     },
     {
         title: "Flobiz - mySandesh Application",
@@ -148,8 +138,7 @@ const CAREER_JOURNEY = [
             "Implemented functionality to merge frames with images or videos.",
             "Ongoing development and feature enhancement."
         ],
-        skills: ["Flutter", "Dart", "UI/UX Design"],
-        icon: "🎉"
+        skills: ["Flutter", "Dart", "UI/UX Design"]
     }
 ];
 
@@ -200,20 +189,6 @@ function createTimelineItem(item, index, isFirst, isLast) {
     return timelineItem;
 }
 
-/**
- * Adds a game icon to a container element
- * @param {string} icon - Emoji icon
- * @param {HTMLElement} container - Container element to add the icon to
- */
-function addGameIcon(icon, container) {
-    const gameIcon = document.createElement('div');
-    gameIcon.classList.add('game-icon');
-    gameIcon.textContent = icon;
-    gameIcon.style.left = `${Math.random() * 100}%`;
-    gameIcon.style.top = `${Math.random() * 100}%`;
-    container.appendChild(gameIcon);
-}
-
 function animateTimeline() {
     const timeline = document.querySelector('.timeline');
     const timelineItems = document.querySelectorAll('.timeline-item');
@@ -250,7 +225,6 @@ document.addEventListener('DOMContentLoaded', function() {
         companyItems.forEach((item, index) => {
             const timelineItem = createTimelineItem(item, index, index === 0, index === companyItems.length - 1);
             companySection.appendChild(timelineItem);
-            addGameIcon(item.icon, timelineItem);
         });
         
         timeline.appendChild(companySection);

@@ -427,20 +427,6 @@ h2 {
     }
 }
 
-.game-icon {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
 @media (max-width: 768px) {
     header {
         padding: 1rem 0;

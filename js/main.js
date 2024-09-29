@@ -61,7 +61,7 @@ const CAREER_JOURNEY = [
         skills: ["React Native", "JavaScript", "SDK Development"]
     },
     {
-        title: "Flobiz - myBillBook (Part 1)",
+        title: "Flobiz - myBillBook",
         company: "Flobiz",
         date: "Oct 2021 - May 2022",
         description: "Joined as a Full Stack Engineer, initially focusing on Android development:",
@@ -138,7 +138,7 @@ const CAREER_JOURNEY = [
             "Implemented functionality to merge frames with images or videos.",
             "Ongoing development and feature enhancement."
         ],
-        skills: ["Flutter", "Dart", "UI/UX Design"]
+        skills: ["Flutter", "Dart"]
     }
 ];
 

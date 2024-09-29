@@ -30,8 +30,9 @@ body {
 }
 
 header {
-    position: sticky;
+    position: fixed; /* Change from sticky to fixed */
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     padding: 1rem 0;
@@ -326,7 +327,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    padding-top: 2rem; /* Adjust this value as needed */
+    padding-top: 300px;
 }
 
 section {
@@ -726,11 +727,6 @@ footer {
     fill: var(--primary-color);
 }
 
-.skill-item:hover svg {
-    fill: #fff;
-    transform: scale(1.1);
-}
-
 .skill-item span {
     font-weight: 600;
     text-align: center;
@@ -944,6 +940,7 @@ footer {
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    padding-top: 100px; /* Add this line */
 }
 
 .header-content h1,
@@ -955,4 +952,19 @@ header.scrolled .header-content h1,
 header.scrolled .header-content .subtitle {
     opacity: 0;
     transform: translateY(-20px);
+}
+
+/* Add this new rule */
+header.hidden {
+    transform: translateY(-100%);
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 80px; /* Adjust for smaller screens */
+    }
+
+    .scrollable-content {
+        padding-top: 80px; /* Adjust for smaller screens */
+    }
 }

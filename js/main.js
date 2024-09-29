@@ -266,49 +266,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Implement header shrink on scroll
+    // Implement header hide on scroll
     const header = document.querySelector('header');
-    const headerContent = document.querySelector('.header-content');
-    const headerTitle = document.querySelector('.header-content h1');
-    const headerSubtitle = document.querySelector('.header-content .subtitle');
-    const nav = document.querySelector('nav');
-    const scrollToTopBtn = document.querySelector('.scroll-to-top');
     const scrollContainer = document.querySelector('.scrollable-content');
-
     let lastScrollTop = 0;
+    let scrollThreshold = 100; // Adjust this value to change when the header hides
 
     scrollContainer.addEventListener('scroll', () => {
         const scrollTop = scrollContainer.scrollTop;
 
-        if (scrollTop > 100) {
-            header.classList.add('scrolled');
-            scrollToTopBtn.classList.add('visible');
-            headerTitle.style.opacity = '0';
-            headerTitle.style.transform = 'translateY(-20px)';
-            headerSubtitle.style.opacity = '0';
-            headerSubtitle.style.transform = 'translateY(-20px)';
-            headerContent.style.transform = 'scale(0.9)';
-            nav.style.marginTop = '0.5rem';
+        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+            // Scrolling down
+            header.classList.add('hidden');
         } else {
-            header.classList.remove('scrolled');
-            scrollToTopBtn.classList.remove('visible');
-            headerTitle.style.opacity = '1';
-            headerTitle.style.transform = 'translateY(0)';
-            headerSubtitle.style.opacity = '1';
-            headerSubtitle.style.transform = 'translateY(0)';
-            headerContent.style.transform = 'scale(1)';
-            nav.style.marginTop = '1.5rem';
+            // Scrolling up
+            header.classList.remove('hidden');
         }
 
         lastScrollTop = scrollTop;
-    });
-
-    // Scroll to top functionality
-    scrollToTopBtn.addEventListener('click', () => {
-        scrollContainer.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
     });
 
     // Initialize particle background
@@ -328,6 +303,24 @@ document.addEventListener('DOMContentLoaded', function() {
             modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
         },
         retina_detect: true
+    });
+
+    // Scroll to top functionality
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+    scrollContainer.addEventListener('scroll', () => {
+        if (scrollContainer.scrollTop > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+        scrollContainer.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 
     // Animate skill tags

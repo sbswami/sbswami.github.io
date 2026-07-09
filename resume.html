@@ -3,298 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shyam Bihari Swami - Software Engineer & Solo Founder Resume</title>
+    <title>Shyam Bihari Swami - Software Engineer Resume</title>
+    <meta name="description" content="Shyam Bihari Swami - Software Engineer with 5+ years of experience in Flutter, React, Node.js, and full-stack development. Solo founder of myStatus.">
     <style>
+        :root {
+            --text: #1a1a1a;
+            --muted: #4a4a4a;
+            --accent: #1f4e79;
+            --line: #cfd8dc;
+        }
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
+            font-family: 'Calibri', 'Segoe UI', Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+            color: var(--text);
+            max-width: 860px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
+            padding: 32px 24px;
             background-color: #ffffff;
-            padding: 40px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
         }
-        h1, h2 {
-            color: #2c3e50;
+        header {
+            margin-bottom: 6px;
         }
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 5px;
+            font-size: 30px;
+            margin: 0 0 2px 0;
+            color: var(--text);
+            letter-spacing: 0.5px;
+        }
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent);
+            margin: 0 0 8px 0;
+        }
+        .contact {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+        .contact a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .contact span.sep {
+            margin: 0 8px;
+            color: var(--line);
         }
         h2 {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-top: 30px;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            border-bottom: 1.5px solid var(--accent);
+            padding-bottom: 4px;
+            margin: 22px 0 12px 0;
         }
-        .contact-info {
+        p {
+            margin: 6px 0;
+        }
+        .job {
+            margin-bottom: 16px;
+        }
+        .job-head {
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 30px;
-            font-size: 0.9em;
+            gap: 4px;
         }
-        .contact-info a {
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .job-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0;
         }
-        .contact-info a:hover {
-            color: #2980b9;
+        .job-company {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--muted);
+            margin: 0;
         }
-        .experience {
-            margin-bottom: 30px;
+        .job-meta {
+            font-size: 13px;
+            color: var(--muted);
+            white-space: nowrap;
         }
-        .experience h3 {
-            color: #2980b9;
-            margin-bottom: 10px;
-        }
-        .experience p {
-            margin: 5px 0;
-        }
-        .experience ul {
-            margin-top: 10px;
+        ul {
+            margin: 6px 0 0 0;
             padding-left: 20px;
         }
-        .experience ul li {
-            margin-bottom: 5px;
+        li {
+            margin-bottom: 4px;
         }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+        ul ul {
+            margin-top: 4px;
         }
-        .skill {
-            background-color: #ecf0f1;
-            color: #2c3e50;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease;
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        .skill:hover {
-            background-color: #3498db;
-            color: #ffffff;
+        .skills-table td {
+            padding: 3px 0;
+            vertical-align: top;
+        }
+        .skills-table td.label {
+            font-weight: 700;
+            width: 190px;
+            color: var(--text);
+            padding-right: 12px;
+        }
+        .subitem {
+            font-weight: 600;
+            color: var(--text);
+        }
+        a {
+            color: var(--accent);
         }
         @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            .contact-info {
-                flex-direction: column;
-                gap: 10px;
-            }
+            body { padding: 20px 16px; }
+            .skills-table td.label { width: 130px; }
+            .job-meta { white-space: normal; }
         }
-
-        /* Print styles */
         @media print {
             body {
-                background-color: #ffffff;
                 padding: 0;
-                margin: 0;
-            }
-            .container {
-                box-shadow: none;
-                border-radius: 0;
-                padding: 0;
-                width: 100%;
+                font-size: 11pt;
                 max-width: none;
             }
-            .skill:hover {
-                background-color: #ecf0f1;
-                color: #2c3e50;
-            }
-            @page {
-                margin: 0.5cm;
-            }
+            h1 { font-size: 22pt; }
+            a { color: var(--text); }
+            @page { margin: 1.2cm; }
+            .job { page-break-inside: avoid; }
+            h2 { page-break-after: avoid; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Shyam Bihari Swami</h1>
-        <h2>Software Engineer & Solo Founder</h2>
-
-        <div class="contact-info">
-            <span>📧 <a href="mailto:sbswami18@gmail.com">sbswami18@gmail.com</a></span>
-            <span>📱 <a href="tel:+918239199344">+91 8239199344</a></span>
-            <span>🔗 <a href="https://www.linkedin.com/in/sbswami18" target="_blank">linkedin.com/in/sbswami18</a></span>
-            <span>🌐 <a href="https://sbswami.github.io/" target="_blank">sbswami.github.io</a></span>
+        <p class="title">Software Engineer | Full-Stack &amp; Mobile Developer | Founder</p>
+        <div class="contact">
+            <a href="mailto:sbswami18@gmail.com">sbswami18@gmail.com</a>
+            <span class="sep">|</span>
+            <a href="tel:+918239199344">+91 8239199344</a>
+            <span class="sep">|</span>
+            <a href="https://www.linkedin.com/in/sbswami18" target="_blank" rel="noopener">linkedin.com/in/sbswami18</a>
+            <span class="sep">|</span>
+            <a href="https://sbswami.github.io/" target="_blank" rel="noopener">sbswami.github.io</a>
+            <span class="sep">|</span>
+            <span>India (Remote)</span>
         </div>
+    </header>
 
-        <h2>Summary</h2>
-        <p>Passionate and results-driven Software Engineer with 5+ years of diverse experience across startups and scale-ups, and now a successful solo founder. My journey — from a small village in Rajasthan to building high-impact tech products — reflects dedication, resilience, and a hunger to grow. I specialize in building scalable, cross-platform applications using Flutter, ReactJS, ExpressJS, and MongoDB. In 2025, I launched <strong>myStatus</strong>, which crossed <strong>₹1.5 Cr+ in revenue</strong> within 15 months, completely bootstrapped and developed solo. Currently seeking my next opportunity to work with a smart, motivated team and continue scaling impact through technology.</p>
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Results-driven Software Engineer with 5+ years of experience building scalable, cross-platform mobile and web applications across startups and scale-ups. Skilled in Flutter, React, React Native, Node.js, and MongoDB with proven ownership of full product lifecycles from architecture to deployment on GCP and AWS. Founded and solo-built <strong>myStatus</strong>, a bootstrapped Flutter app that generated <strong>INR 1.5 Cr+ in revenue</strong> within 15 months. Experienced in team leadership, building reusable component libraries, and shipping high-impact features that reduce engineering effort and drive revenue.</p>
+    </section>
 
-        <h2>Work Experience</h2>
+    <section>
+        <h2>Core Skills</h2>
+        <table class="skills-table">
+            <tr>
+                <td class="label">Languages</td>
+                <td>Dart, JavaScript, TypeScript, Java, Kotlin, Python, HTML, CSS, SQL</td>
+            </tr>
+            <tr>
+                <td class="label">Mobile</td>
+                <td>Flutter, React Native, Android (Kotlin/Java), Cross-Platform Development</td>
+            </tr>
+            <tr>
+                <td class="label">Frontend</td>
+                <td>ReactJS, Angular, Redux, Storybook, Component Library Design, Responsive UI</td>
+            </tr>
+            <tr>
+                <td class="label">Backend</td>
+                <td>Node.js, ExpressJS, REST APIs, Django, Electron</td>
+            </tr>
+            <tr>
+                <td class="label">Databases</td>
+                <td>MongoDB, SQLite, Local Storage / Offline DB</td>
+            </tr>
+            <tr>
+                <td class="label">Cloud &amp; DevOps</td>
+                <td>Google Cloud Platform (GCP), AWS, Cloud CDN, Cloud Storage, CI/CD, GitHub Actions, Git</td>
+            </tr>
+            <tr>
+                <td class="label">Practices</td>
+                <td>Agile / Scrum, System Design, Payment Gateway Integration, Team Leadership, Product Management</td>
+            </tr>
+        </table>
+    </section>
 
-        <div class="experience">
-            <h3>myStatus App - Solo Founder & Full Stack Developer</h3>
-            <p><strong>Duration:</strong> January 2025 - Present</p>
-            <p><strong>Type:</strong> Self-employed · Remote</p>
+    <section>
+        <h2>Professional Experience</h2>
+
+        <div class="job">
+            <div class="job-head">
+                <div>
+                    <p class="job-title">Solo Founder &amp; Full-Stack Developer</p>
+                    <p class="job-company">myStatus (Self-Employed)</p>
+                </div>
+                <div class="job-meta">Jan 2025 – Present · Remote</div>
+            </div>
             <ul>
-                <li>Launched myStatus, a Flutter-based status and greeting creation app, achieving <strong>₹1.5 Cr+ in revenue</strong> within 15 months as a solo founder and developer.</li>
-                <li>Single-handedly built and managed the entire tech stack — Flutter (frontend), ExpressJS & MongoDB (backend), deployed on Google Cloud Platform.</li>
-                <li>Integrated Cloud CDN & GCP Storage to deliver high-speed media loading and seamless user experience at scale.</li>
-                <li>Designed and implemented custom algorithms for media rendering, personalized templates, and optimized performance for low-end devices.</li>
-                <li>Developed robust admin tools and analytics dashboards for managing content, tracking user behavior, and monitoring in-app engagement.</li>
-                <li>Integrated payment infrastructure enabling premium content, driving monetization through in-app purchases and offers.</li>
-                <li>Achieved exceptional growth through high-performing marketing campaigns and organic reach — scaling to 600K+ user reach completely bootstrapped.</li>
-                <li>Currently managing product, marketing, customer support, and business strategy — wearing all hats efficiently to scale operations.</li>
+                <li>Founded and solo-built myStatus, a Flutter-based status and greeting creation app, generating <strong>INR 1.5 Cr+ in revenue</strong> within 15 months, fully bootstrapped.</li>
+                <li>Architected and shipped the complete tech stack independently: Flutter (frontend), Node.js and ExpressJS with MongoDB (backend), deployed on Google Cloud Platform.</li>
+                <li>Integrated Cloud CDN and GCP Storage to deliver high-speed media loading and a seamless experience at scale.</li>
+                <li>Designed custom algorithms for media rendering and personalized templates, optimizing performance for low-end devices.</li>
+                <li>Built admin tools and analytics dashboards for content management, user behavior tracking, and in-app engagement monitoring.</li>
+                <li>Integrated payment infrastructure for in-app purchases and premium content, driving monetization.</li>
+                <li>Scaled to <strong>600K+ user reach</strong> through organic growth and high-performing marketing campaigns, while owning product, marketing, support, and business strategy.</li>
             </ul>
         </div>
 
-        <div class="experience">
-            <h3>FloBiz - Senior Software Engineer</h3>
-            <p><strong>Duration:</strong> October 2021 - January 2025</p>
-            <p><strong>Company:</strong> FloBiz</p>
-            <p><strong>Project:</strong> myBillBook</p>
+        <div class="job">
+            <div class="job-head">
+                <div>
+                    <p class="job-title">Senior Software Engineer</p>
+                    <p class="job-company">FloBiz (myBillBook)</p>
+                </div>
+                <div class="job-meta">Oct 2021 – Jan 2025 · Bengaluru, India</div>
+            </div>
             <ul>
-                <li>Developed 'mySandesh', a Flutter-based application for creating festival greetings (August 2024 - January 2025)
-                    <ul>
-                        <li>Implemented functionality to merge frames with images or videos</li>
-                        <li>Contributed to project structure and created resizable custom widgets</li>
-                    </ul>
-                </li>
-                <li>Led the development of 'Money Tree by myBillBook', a loan disbursal application (April 2024 - July 2024)
-                    <ul>
-                        <li>Led a team of 3 developers to create the application using Flutter</li>
-                        <li>Developed a Flutter package containing essential startup code for new projects</li>
-                        <li>Implemented features like translations, theming, routing, local DB, and network interceptors</li>
-                        <li>Successfully integrated the application with myBillBook and partnered with Liquloans</li>
-                    </ul>
-                </li>
-                <li>Headed the development of a comprehensive component library (June 2023 - November 2023)
-                    <ul>
-                        <li>Led a team of 3 developers to create a component library for web and desktop projects</li>
-                        <li>Developed a wide range of components including typography, buttons, tables, cards, etc.</li>
-                        <li>Created a Storybook for easy component visualization and usage</li>
-                        <li>Achieved full adoption by 12 developers across web projects within 6 months</li>
-                    </ul>
-                </li>
-                <li>Revolutionized the payment system for myBillBook (November 2022 - May 2023)
-                    <ul>
-                        <li>Built a centralized pricing module handling price lists and payment gateways</li>
-                        <li>Enabled easy experimentation for the product team through on-the-air updates</li>
-                        <li>Implemented features for flash sales, discounts, and dynamic UI</li>
-                        <li>Reduced developer effort by 4 times for pricing-related tasks</li>
-                    </ul>
-                </li>
-                <li>Led a crucial initiative to streamline invoice creation across platforms (June 2022 - October 2022)
-                    <ul>
-                        <li>Created a unified invoice module usable across Android, iOS, Web, and Desktop platforms</li>
-                        <li>Implemented on-the-air update functionality for the module</li>
-                        <li>Developed an invoice service for sharing invoices via links</li>
-                        <li>Reduced invoice-related bugs from hundreds to 1-2 monthly</li>
-                        <li>Decreased developer effort from 5 to 1 for feature building and bug fixing</li>
-                    </ul>
-                </li>
-                <li>Initially focused on Android development (October 2021 - May 2022)
-                    <ul>
-                        <li>Worked on myBillBook, a comprehensive billing solution platform</li>
-                        <li>Executed daily tasks and bug fixes in Android development using Kotlin</li>
-                        <li>Gained in-depth knowledge of the product ecosystem</li>
-                    </ul>
-                </li>
+                <li>Built <span class="subitem">mySandesh</span>, a Flutter app for creating festival greetings, implementing frame-merging with images and videos and reusable resizable custom widgets.</li>
+                <li>Led a team of 3 to develop <span class="subitem">Money Tree by myBillBook</span>, a loan disbursal app in Flutter; created a reusable startup package (translations, theming, routing, local DB, network interceptors) and integrated it with myBillBook in partnership with Liquiloans.</li>
+                <li>Headed development of a <span class="subitem">component library</span> for web and desktop with a team of 3, delivering typography, buttons, tables, cards, and a Storybook; achieved full adoption by 12 developers within 6 months.</li>
+                <li>Revolutionized the <span class="subitem">payment system</span> with a centralized pricing module supporting price lists, payment gateways, flash sales, discounts, and dynamic UI via on-the-air updates, reducing pricing-related developer effort by 4x.</li>
+                <li>Created a <span class="subitem">unified invoice module</span> usable across Android, iOS, Web, and Desktop with on-the-air updates and link-based sharing, reducing invoice bugs from hundreds to 1–2 per month and cutting developer effort 5x.</li>
+                <li>Started with Android development in Kotlin on myBillBook, handling daily tasks and bug fixes while building deep product knowledge.</li>
             </ul>
         </div>
 
-        <div class="experience">
-            <h3>smallcase - Mobile Engineer</h3>
-            <p><strong>Duration:</strong> July 2020 - October 2021</p>
-            <p><strong>Company:</strong> smallcase</p>
+        <div class="job">
+            <div class="job-head">
+                <div>
+                    <p class="job-title">Mobile Engineer</p>
+                    <p class="job-company">smallcase</p>
+                </div>
+                <div class="job-meta">Jul 2020 – Oct 2021 · Bengaluru, India</div>
+            </div>
             <ul>
-                <li>Refactored the entire smallcase application from class-based to functional components in React Native</li>
-                <li>Developed a custom React Native SDK for Fresh Chat due to lack of an official version</li>
-                <li>Integrated a payment gateway for the smallcase manager payment system, a crucial revenue source</li>
+                <li>Refactored the entire smallcase app from class-based to functional components in React Native, improving maintainability.</li>
+                <li>Developed a custom React Native SDK for Freshchat due to the lack of an official version.</li>
+                <li>Integrated a payment gateway for the smallcase Manager payment system, a key revenue source.</li>
             </ul>
         </div>
 
-        <div class="experience">
-            <h3>Actyv - Full Stack Developer</h3>
-            <p><strong>Duration:</strong> December 2019 - June 2020</p>
-            <p><strong>Company:</strong> Actyv</p>
+        <div class="job">
+            <div class="job-head">
+                <div>
+                    <p class="job-title">Full-Stack Developer</p>
+                    <p class="job-company">Actyv</p>
+                </div>
+                <div class="job-meta">Dec 2019 – Jun 2020 · Bengaluru, India</div>
+            </div>
             <ul>
-                <li>Focused on the Bill Discounting application, working with MongoDB, ExpressJS, and React Native</li>
-                <li>Gained in-depth knowledge of TypeScript and JavaScript concepts</li>
-                <li>Contributed to the development of multiple products including 'Jandan' and 'Bill Discounting'</li>
+                <li>Built the Bill Discounting application using MongoDB, ExpressJS, and React Native.</li>
+                <li>Contributed to multiple products including Jandan and Bill Discounting.</li>
+                <li>Deepened expertise in TypeScript and JavaScript fundamentals.</li>
             </ul>
         </div>
 
-        <div class="experience">
-            <h3>Script IT Solutions - Versatile Developer</h3>
-            <p><strong>Duration:</strong> July 2019 - December 2019</p>
-            <p><strong>Company:</strong> Script IT Solutions</p>
+        <div class="job">
+            <div class="job-head">
+                <div>
+                    <p class="job-title">Software Developer</p>
+                    <p class="job-company">Script IT Solutions</p>
+                </div>
+                <div class="job-meta">Jul 2019 – Dec 2019 · India</div>
+            </div>
             <ul>
-                <li>Worked on multiple technologies simultaneously, including ReactJS (TypeScript), Django (Python3), and Electron</li>
-                <li>Contributed to shared e-commerce and inventory management projects</li>
-                <li>Independently developed an election ballot project using ReactJS and Electron</li>
+                <li>Worked across ReactJS (TypeScript), Django (Python 3), and Electron simultaneously.</li>
+                <li>Contributed to shared e-commerce and inventory management projects.</li>
+                <li>Independently developed an election ballot application using ReactJS and Electron.</li>
             </ul>
         </div>
+    </section>
 
+    <section>
         <h2>Education</h2>
-        <div class="experience">
-            <h3>Computer Science and Engineering</h3>
-            <p><strong>Duration:</strong> August 2015 - May 2019</p>
-            <p><strong>Institution:</strong> Rajasthan Technical University, Kota</p>
+        <div class="job">
+            <div class="job-head">
+                <div>
+                    <p class="job-title">B.Tech, Computer Science and Engineering</p>
+                    <p class="job-company">Rajasthan Technical University, Kota</p>
+                </div>
+                <div class="job-meta">Aug 2015 – May 2019</div>
+            </div>
             <ul>
-                <li>Developed a Canteen Management System using Java 8 and SQLite for offline use</li>
-                <li>Created Buy Sell Inventory and Farm Management System applications for Android using Java and Android Studio</li>
-                <li>Gained proficiency in Java, SQLite, and Android development</li>
+                <li>Built a Canteen Management System using Java 8 and SQLite for offline use.</li>
+                <li>Developed Buy Sell Inventory and Farm Management System Android apps using Java and Android Studio.</li>
             </ul>
         </div>
+    </section>
 
-        <h2>Personal Projects</h2>
-        <div class="experience">
-            <p><strong>Duration:</strong> July 2020</p>
-            <ul>
-                <li>Developed Buy Sell Inventory version 2 using Flutter</li>
-                <li>Created 'Ram Ram Sa', a society database and relative record-keeping application</li>
-                <li>Built 'CQN - Classroom Quiz Notes' for online classes, note sharing, and private classroom quizzes</li>
-            </ul>
-        </div>
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li><span class="subitem">Buy Sell Inventory v2</span> — Rebuilt inventory management app using Flutter.</li>
+            <li><span class="subitem">Ram Ram Sa</span> — Society database and relative record-keeping application.</li>
+            <li><span class="subitem">CQN (Classroom Quiz Notes)</span> — App for online classes, note sharing, and private classroom quizzes.</li>
+        </ul>
+    </section>
 
-        <h2>Key Highlights</h2>
-        <div class="experience">
-            <ul>
-                <li>600K+ user reach across products</li>
-                <li>₹1.5 Cr+ revenue bootstrapped solo with myStatus in 15 months</li>
-                <li>Unified invoice module reducing developer effort 5x at FloBiz</li>
-                <li>Led teams of 3 developers across multiple product launches</li>
-                <li>Full-stack ownership: Flutter · ReactJS · ExpressJS · MongoDB · GCP</li>
-            </ul>
-        </div>
-
-        <h2>Skills</h2>
-        <div class="skills">
-            <span class="skill">Flutter</span>
-            <span class="skill">Dart</span>
-            <span class="skill">React Native</span>
-            <span class="skill">ReactJS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">TypeScript</span>
-            <span class="skill">Angular</span>
-            <span class="skill">HTML/CSS</span>
-            <span class="skill">Node.js</span>
-            <span class="skill">ExpressJS</span>
-            <span class="skill">MongoDB</span>
-            <span class="skill">SQLite</span>
-            <span class="skill">GCP</span>
-            <span class="skill">AWS</span>
-            <span class="skill">Git</span>
-            <span class="skill">Python (Django)</span>
-            <span class="skill">Java</span>
-            <span class="skill">Kotlin</span>
-            <span class="skill">CI/CD (GitHub Actions)</span>
-            <span class="skill">Agile Methodologies</span>
-            <span class="skill">Team Leadership</span>
-            <span class="skill">Product Management</span>
-        </div>
-    </div>
+    <section>
+        <h2>Key Achievements</h2>
+        <ul>
+            <li>Generated <strong>INR 1.5 Cr+ revenue</strong>, bootstrapped and built solo with myStatus in 15 months.</li>
+            <li>Reached <strong>600K+ users</strong> across products.</li>
+            <li>Delivered a unified invoice module that reduced developer effort 5x at FloBiz.</li>
+            <li>Led teams of 3 developers across multiple product launches.</li>
+            <li>Drove full-stack ownership across Flutter, ReactJS, ExpressJS, MongoDB, and GCP.</li>
+        </ul>
+    </section>
 </body>
 </html>

@@ -1,26 +1,73 @@
-# Your Name - Software Developer Portfolio
+# 👋 Hi, I'm Shyam Bihari Swami
 
-This repository contains the source code for my personal portfolio website. It showcases my projects, skills, and experience as a software developer with 5 years of experience in various technologies.
+## 💻 Software Development Engineer 2 (SDE 2) | Full Stack Developer
 
-## Technologies Used
+With 5 years of experience in the tech industry, I'm passionate about crafting efficient, scalable, and user-friendly solutions across multiple platforms.
 
-- HTML5
-- CSS3
-- JavaScript
+### 🚀 Quick Overview
 
-## Structure
+- 🔭 Currently working at Flobiz, developing innovative solutions for business management
+- 🌱 Constantly learning and adapting to new technologies
+- 👯 Open to collaborating on exciting open-source projects
+- 💬 Ask me about Flutter, React Native, or full-stack development
 
-- `index.html`: The main entry point of the website
-- `css/styles.css`: Contains all the styles for the website
-- `js/main.js`: Contains JavaScript functionality
-- `images/`: Directory for storing image assets
-- `projects/`: Directory for individual project pages
-- `assets/`: Directory for other assets like PDFs, etc.
+### 🛠️ Tech Stack
 
-## Deployment
+- **Mobile:** Flutter, React Native, Android (Kotlin)
+- **Web:** React.js, Angular, HTML5, CSS3, JavaScript, TypeScript
+- **Backend:** Node.js, Express.js, Django (Python)
+- **Database:** MongoDB, SQLite
+- **Tools:** Git, GitHub Actions, AWS S3
+- **Languages:** Dart, JavaScript, TypeScript, Python, Java, Kotlin
 
-This website is deployed using GitHub Pages. The `main` branch is set up to automatically deploy to GitHub Pages.
+### 🏆 Key Achievements
 
-## Local Development
+- 📱 Led the development of 'Money Tree by myBillBook', a loan disbursal application using Flutter
+- 🧩 Spearheaded the creation of a unified invoice module, reducing invoice-related bugs from hundreds to 1-2 monthly
+- 💰 Developed a centralized pricing module, streamlining payment systems and enabling easy experimentation
+- 🎨 Led a team in creating a comprehensive component library and design system, achieving full adoption across web projects
 
-To run this website locally, simply clone the repository and open `index.html` in your web browser.
+### 📈 GitHub Stats
+
+![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical)
+
+### 🌟 Featured Projects
+
+1. **Invoice Module Initiative**
+   - Unified invoice creation across Android, iOS, Web, and Desktop platforms
+   - Implemented on-the-air updates and reduced developer effort by 80%
+
+2. **Pricing Module Development**
+   - Centralized system for handling price lists and payment gateways
+   - Enabled flash sales, discounts, and dynamic UI with ReactJS and AWS S3
+
+3. **Component Library and Design System**
+   - Led development of a comprehensive library for web and desktop projects
+   - Achieved full adoption by 12 developers within 6 months
+
+4. **Loan Disbursal Application (Money Tree)**
+   - Developed using Flutter, integrated with existing systems
+   - Created a reusable Flutter package for startup code in new projects
+
+### 📫 How to reach me
+
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/yourusername)
+- Email: your.email@example.com
+- Portfolio: [Your Portfolio Website](https://www.yourportfolio.com)
+
+### 👨‍💻 Open Source Contributions
+
+I'm passionate about giving back to the community. Check out my contributions to open-source projects:
+
+- [Project 1](https://github.com/project1): Brief description of your contribution
+- [Project 2](https://github.com/project2): Brief description of your contribution
+
+### 🎓 Education
+
+- Bachelor's in Computer Science and Engineering, Rajasthan Technical University, Kota (2015-2019)
+
+---
+
+💡 "The only way to do great work is to love what you do." - Steve Jobs
+
+Feel free to explore my repositories and don't hesitate to reach out for collaborations or just a chat about tech!

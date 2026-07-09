@@ -129,16 +129,30 @@ const CAREER_JOURNEY = [
     },
     {
         title: "Flobiz - mySandesh Application",
-        date: "Aug 2024 - Present",
+        date: "Aug 2024 - Jan 2025",
         company: "Flobiz",
-        description: "Currently working on a new application for creating and sharing business greetings:",
+        description: "Worked on a Flutter-based application for creating and sharing business greetings:",
         details: [
-            "Developing 'mySandesh', a Flutter-based application for creating festival greetings.",
+            "Developed 'mySandesh', a Flutter-based application for creating festival greetings.",
             "Contributed to project structure and created resizable custom widgets.",
-            "Implemented functionality to merge frames with images or videos.",
-            "Ongoing development and feature enhancement."
+            "Implemented functionality to merge frames with images or videos."
         ],
         skills: ["Flutter", "Dart"]
+    },
+    {
+        title: "myStatus App",
+        date: "Jan 2025 - Present",
+        company: "myStatus App",
+        description: "Launched myStatus as a solo founder — a Flutter-based status and greeting creation app that crossed ₹1.5 Cr+ in revenue within 15 months:",
+        details: [
+            "Single-handedly built the entire tech stack: Flutter (frontend), ExpressJS & MongoDB (backend), deployed on Google Cloud Platform.",
+            "Integrated Cloud CDN & GCP Storage for high-speed media loading and seamless user experience at scale.",
+            "Designed custom algorithms for media rendering, personalized templates, and optimized performance for low-end devices.",
+            "Developed robust admin tools and analytics dashboards for content management, user behavior tracking, and in-app engagement monitoring.",
+            "Integrated payment infrastructure enabling premium content, driving monetization through in-app purchases and offers.",
+            "Managed product, marketing, customer support, and business strategy — scaling to 600K+ user reach completely bootstrapped."
+        ],
+        skills: ["Flutter", "ExpressJS", "MongoDB", "GCP", "Node.js", "TypeScript"]
     }
 ];
 

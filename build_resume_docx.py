@@ -22,7 +22,7 @@ def run(text, bold=False, sz=20):
     )
 
 
-def para(runs_xml, style=None, space_after=80, space_before=0, jc=None):
+def para(runs_xml, style=None, space_after=60, space_before=0, jc=None):
     ppr = '<w:pPr>'
     if style:
         ppr += f'<w:pStyle w:val="{style}"/>'
@@ -37,7 +37,7 @@ def heading(text):
     # Section heading: bold, uppercase, accent color, bottom border
     ppr = (
         '<w:pPr>'
-        '<w:spacing w:before="220" w:after="80"/>'
+        '<w:spacing w:before="140" w:after="50"/>'
         '<w:pBdr><w:bottom w:val="single" w:sz="8" w:space="2" w:color="1F4E79"/></w:pBdr>'
         '</w:pPr>'
     )
@@ -51,7 +51,7 @@ def heading(text):
 def bullet(text_runs):
     ppr = (
         '<w:pPr><w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr>'
-        '<w:spacing w:after="60"/></w:pPr>'
+        '<w:spacing w:after="30"/></w:pPr>'
     )
     return f'<w:p>{ppr}{text_runs}</w:p>'
 
@@ -66,7 +66,7 @@ def job(title, company, meta, bullets):
     # Title + meta on one line: title bold, meta right via tab
     tline = (
         '<w:p><w:pPr><w:tabs><w:tab w:val="right" w:pos="9360"/></w:tabs>'
-        '<w:spacing w:before="120" w:after="0"/></w:pPr>'
+        '<w:spacing w:before="90" w:after="0"/></w:pPr>'
         f'<w:r><w:rPr><w:b/><w:sz w:val="21"/></w:rPr>'
         f'<w:t xml:space="preserve">{escape(title)}</w:t></w:r>'
         '<w:r><w:tab/></w:r>'
@@ -179,15 +179,6 @@ body.append(job(
         [("Developed Buy Sell Inventory and Farm Management System Android apps using Java and Android Studio.", False)],
     ]))
 
-# Projects
-body.append(heading("Projects"))
-for seg in [
-    [("Buy Sell Inventory v2", True), (" - Rebuilt inventory management app using Flutter.", False)],
-    [("Ram Ram Sa", True), (" - Society database and relative record-keeping application.", False)],
-    [("CQN (Classroom Quiz Notes)", True), (" - App for online classes, note sharing, and private classroom quizzes.", False)],
-]:
-    body.append(bullet(rich(seg)))
-
 # Key Achievements
 body.append(heading("Key Achievements"))
 for seg in [
@@ -243,7 +234,7 @@ styles = (
     '<w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/>'
     '<w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr></w:rPrDefault></w:docDefaults>'
     '<w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/>'
-    '<w:pPr><w:spacing w:after="80" w:line="252" w:lineRule="auto"/></w:pPr></w:style>'
+    '<w:pPr><w:spacing w:after="60" w:line="240" w:lineRule="auto"/></w:pPr></w:style>'
     '</w:styles>'
 )
 

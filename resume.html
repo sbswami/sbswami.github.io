@@ -133,14 +133,23 @@
         @media print {
             body {
                 padding: 0;
-                font-size: 11pt;
+                font-size: 10pt;
+                line-height: 1.32;
                 max-width: none;
             }
-            h1 { font-size: 22pt; }
+            h1 { font-size: 20pt; }
+            .title { font-size: 11pt; }
             a { color: var(--text); }
-            @page { margin: 1.2cm; }
-            .job { page-break-inside: avoid; }
-            h2 { page-break-after: avoid; }
+            h2 {
+                font-size: 11pt;
+                margin: 12px 0 6px 0;
+                page-break-after: avoid;
+            }
+            .job { margin-bottom: 9px; page-break-inside: avoid; }
+            li { margin-bottom: 2px; }
+            p { margin: 3px 0; }
+            .skills-table td { padding: 1px 0; }
+            @page { margin: 1cm; }
         }
     </style>
 </head>
@@ -301,15 +310,6 @@
                 <li>Developed Buy Sell Inventory and Farm Management System Android apps using Java and Android Studio.</li>
             </ul>
         </div>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li><span class="subitem">Buy Sell Inventory v2</span> — Rebuilt inventory management app using Flutter.</li>
-            <li><span class="subitem">Ram Ram Sa</span> — Society database and relative record-keeping application.</li>
-            <li><span class="subitem">CQN (Classroom Quiz Notes)</span> — App for online classes, note sharing, and private classroom quizzes.</li>
-        </ul>
     </section>
 
     <section>
